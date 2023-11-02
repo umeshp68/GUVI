@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff9933, #fff, #138808);
+    background-size: 200% 200%;
+    color: #fff;
+}
+
+.countdown-container, .independence-day-container {
+    text-align: center;
+}
+
+.countdown, .independence-day {
+    font-size: 5rem;
+    display: none; /* Initially hide both countdown and "Happy Independence Day" */
+}
+
+.independence-day {
+    color: #ff9933;
+    font-weight: bold;
+}
