@@ -1,0 +1,310 @@
+// console.log("Hello World")
+// console.log("Welcome")
+
+//Variables
+// var a = 5
+// var b = 10
+// console.log(a+b)
+
+//Data Types
+//1. Number - Integer(10,12) and Flot(2.212, 3.14)
+//2. String - Any character under ' ' or " " "Hello", "100"
+//3. Boolean - true or false
+//4. Objects - [ ], { }
+
+// var a = 10
+// var b = "Hello"
+// var c = true
+
+// console.log(typeof(a),typeof(b), typeof(c))
+
+//Operators
+//1. Arithmetic Operators +, -, *, /, %, **
+// var a = "10"
+// var b = "4"
+// console.log(a/b)
+// console.log(a%b)
+// console.log(a**b)
+// console.log(a+b)//concatenation
+
+
+//type casting
+// var a = "10"
+// var b = "4.14"
+// var c = parseInt(a)
+// var d = parseFloat(b)
+
+// var c = Number(a)
+// var d = Number(b)
+
+// console.log(c+d)
+
+// console.log(Number(b)**3)
+
+
+//Logical Operator - &&, ||, !
+
+// input1  input2      &&      ||
+// true    true        true    true
+// true    false       false   true
+// false   true        false   true
+// false   false       false   false
+
+// !true -> false
+// !false ->true
+
+// console.log(!true)
+
+//Comparision Operator - <,>,<=,>=, ==, ===, !=, !==
+
+// ==, != will check the value only
+// ===, !== will check the value and data type
+
+// var a = 10
+// var b = "10"
+// console.log(a!==b)
+
+//Increment and Decrement Operator ++, --
+// var a = 10
+// a-- // a=a+1
+// console.log(a)
+
+//POST - use first and update
+//PRE - update first and use
+
+// var a = 10
+// console.log(a++,a++,--a,a--,a++,a)
+//          10  11  11  11  10  11
+// a = 11
+
+// var a = 20
+// console.log(a++,++a,a--,--a,a--,a)
+//          20  22  22  20  20  19
+// a = 19
+
+
+//Conditional Statements
+// if(condition)
+// {
+//     //if part
+// }
+// else if(condition)
+// {
+//     // else if part
+// }
+// else
+// {
+//     //else part
+// }
+
+//1. Find the greatest of 2 numbers
+// var a = 10
+// var b = 30
+// if(a>b)
+// {
+//     console.log(a+" is greatest")
+// }
+// else if(b>a)
+// {
+//     console.log(b+" is greatest")
+// }
+// else
+// {
+//     console.log("Both are equall")
+// }
+
+
+// Find the greatets of 3 numbers
+// var a = 5
+// var b = 10
+// var c = 10
+
+// if(a>b && a>c)
+// {
+//     console.log(a+" is greatest")
+// }
+// else if(b>a && b>c)
+// {
+//     console.log(b+" is greatest")
+// }
+// else if(c>a && c>b)
+// {
+//     console.log(c+" is greatest")
+// }
+// else if(a===b && b===c)
+// {
+//     console.log("All are equall")
+// }
+// else
+// {
+//     console.log("Can not be determined")
+// }
+
+
+// if(a>b)
+// {
+//     if(a>c)
+//     {
+//         console.log(a+" is greatest")
+//     }
+// }
+
+
+//Looping Statements
+//1. For
+//2. While
+//3. Do While
+    //1             2           4
+// for(initialisation;condition;INC/DEC)
+// {
+//     body    3
+// }   
+
+// for(var i = 1;i<=5;i++)
+// {
+//     console.log("Hello World",i)
+// }
+
+
+//Find the Sum of N natural numbers
+//N=5 -> 1+2+3+4+5 = 15
+// var sum=0
+// for(var i = 1;i<=5;i++)
+// {
+//     sum = sum + i
+//     // console.log(i,sum)
+// }
+// console.log(sum)
+
+
+//Find the factorial of given number 
+//N=5 1*2*3*4*5 = 120
+
+// var sum=1
+// for(var i = 1;i<=5;i++)
+// {
+//     sum = sum * i
+//     console.log(i,sum)
+// }
+// console.log(sum)
+
+
+//Hoisting
+
+// console.log(a)
+// var a = 10
+// console.log(a)
+
+//let
+// console.log(a)
+// let a = 10
+// console.log(a)
+
+
+// var
+//  1. Hoisting
+//  2. Global Scope 
+//  3. Can be re-declared
+// let
+//  1. Prevents Hoisting
+//  2. Local Scope
+//  3. Redeclaration not possible
+
+
+// if(true)
+// {
+//     let a = 10
+//     console.log('Inside Scope',a)
+// }
+// console.log('Outside Scope',a)
+
+// var a = 10
+// a = 20 // re-assignement
+// var a = 30// re-declaration
+
+// let a = 10
+// let a = 20
+
+
+//const - same as let, re-assignement not possible
+// const pi = 3.14
+// pi = 20
+
+
+//Arrays
+//1. Array will save data in sequential order
+//2. Array values can be accessed by Index Postions
+//3. Index starts from 0 and ends at n-1
+
+// let marks = [9,8,5,6,7,10,3]
+// console.log(marks.length)
+
+//find the last element of the array
+// console.log(marks[marks.length-1])
+
+// for(let i=0;i<marks.length;i++)
+// {
+//     console.log(marks[i])
+// }
+
+//1. Find the sum and average of all array elements
+// let marks = [9,8,5,6,7,10,3]
+// let sum = 0
+// for(let i = 0;i<marks.length;i++)
+// {
+//     sum = sum + marks[i]
+// }
+// console.log(sum)
+// let avg = sum/marks.length
+// console.log(avg.toFixed(2))
+
+
+// let a = [1,2,3,4,5,6,7,8,9]
+// a.push(10,100,200)// insert at the end
+// console.log(a)
+// a.pop()//delete at end
+// a.pop()
+// console.log(a)
+
+// a.unshift(1000)/// insert at begining
+// console.log(a)
+// a.shift()// delete at begining
+// a.shift()
+// console.log(a)
+
+
+// splice(startIndex)
+// splice(startIndex,deleteCount)
+// splice(startIndex,deleteCount, InsertItems)
+
+
+// let a = [1,2,3,4,5,6,7,8,9]
+// a.splice(4)
+// a.splice(6,1)
+// a.splice(2,0,30,40,50,60)
+// console.log(a)
+
+//split and //join
+
+// let str = "apple carplay connecting and disconnecting"
+// let splittedArray = str.split(" ")
+// console.log(splittedArray.join("+"))\
+
+// let str = "apple+carplay+connecting+and+disconnecting"
+// console.log(str.split("+").join(" "))
+
+//JSON - Javascript object Notation
+// let details = [{
+//     name:"Raj",
+//     email:"raj@gmail.com",
+//     mobile:"99874567656",
+//     address:"13, Dubai Main Road, Dubai"
+// },
+// {
+//     name:"Nag",
+//     email:"nag@gmail.com",
+//     mobile:"568765445",
+//     address:"23, Dubai Cross Cut Road, Dubai"
+// }]
+
+// console.log(details[1].address)
