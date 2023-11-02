@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Update Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f8fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+        }
+
+        .event-image {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .event-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            margin-left: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .attendee-input {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="event-image" src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Event Image">
+        <form class="event-form">
+            <h1>Event 1</h1>
+            <p>Number of available seats: 23</p>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone No.:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="num-seats">Number of seats:</label>
+            <select id="num-seats" name="num-seats">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                
+            </select>
+
+            <label for="attendee-name">Name of Attendee 2:</label>
+            <input type="text" class="attendee-input" id="attendee-name" name="attendee-name-1">
+
+            <button type="submit">Submit</button>
+            <button type="button">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
