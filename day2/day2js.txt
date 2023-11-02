@@ -1,0 +1,24 @@
+Difference between window and document objects
+Both are fundamental built-in objects in browsers, but they serve distinct purposes and govern different parts of the browser environment. 
+
+WINDOW OBJECT:
+1. The Global Object: Think of the window object as the overseer of the browser environment. It's the global object in client-side JavaScript. This means any global variable or function you declare inherently becomes a property or method of the window object.
+
+2. Representing the Browser's Window: As hinted by its name, the window object encapsulates everything related to the browser’s window (or tab). It holds properties and methods linked to the browser viewport, such as its dimensions and scrolling capabilities.
+
+3. The Top-Level Parent: Everything in the browser environment falls under the window object. It’s the umbrella that houses other critical objects like document, location, history, and localStorage.
+
+4. Events & Interactivity: With the window object, you can detect and respond to events related to the browser window itself. Examples include events like load, unload, and even resize.
+
+5. Useful Methods: The window object grants us a suite of methods to manage the window's behavior. Want to open a new window? There's open(). Need to display an alert to the user? You have alert(). And there are many more, each with its specific purpose.
+
+DOCUMENT OBJECT:
+1. Gateway to the DOM: The document object is your key to the web page’s content. It represents the page as a structured Document Object Model (DOM), offering a programmable interface to interact with the content.
+
+2. Manipulating Web Content: Through the document object, you have the power to fetch, modify, add, or delete elements and attributes on your web page.
+
+3. The window's Offspring: Though document is a colossal object in its own right, it's technically a property of the window object. Often, developers simply use document, relying on its global nature.
+
+4. Document-Centric Events: This object hosts events that are keenly tied to the document's content. A prime example is DOMContentLoaded, which fires once the initial document structure is fully loaded, ensuring scripts run at the right time.
+
+5. A Toolbox of Methods: The document object boasts a plethora of methods to interact with web content seamlessly.

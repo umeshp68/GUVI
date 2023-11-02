@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries Data Processing</title>
+</head>
+<body>
+
+<h2>Rest Countries Data</h2>
+
+<button onclick="fetchData()">Fetch Data</button>
+
+<script>
+    function fetchData() {
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                // 1. Asian Countries
+                let asianCountries = data.filter(country => country.region === 'Asia');
+                console.log('Asian Countries:', asianCountries);
+
+                // 2. Countries with less than 2 lakhs population
+                let lowPopulationCountries = data.filter(country => country.population < 200000);
+                console.log('Countries with < 2 lakhs population:', lowPopulationCountries);
+
+                // 3. Name, capital and flag details
+                console.log('Details of All Countries:');
+                data.forEach(country => {
+                    console.log(`Name: ${country.name.common}, Capital: ${country.capital[0]}, Flag: ${country.flags[0]}`);
+                });
+
+                // 4. Total population
+                let totalPopulation = data.reduce((acc, country) => acc + country.population, 0);
+                console.log('Total Population:', totalPopulation);
+
+                // 5. Countries using US Dollars
+                let countriesUsingUSD = data.filter(country => country.currencies && country.currencies.USD);
+                console.log('Countries using USD:');
+                countriesUsingUSD.forEach(country => console.log(country.name.common));
+            });
+    }
+</script>
+
+</body>
+</html>
