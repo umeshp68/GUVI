@@ -10,7 +10,6 @@ function countdown(count, callback) {
         callback();
     }
 }
-
 countdown(10, function() {
     countdownElement.textContent = "Happy Independence Day";
 });
