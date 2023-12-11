@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <title>Form and Table Example</title>
+</head>
+<body>
+
+<form id="myForm">
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" required>
+  <br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" required>
+  <br>
+
+  <label for="address">Address:</label>
+  <textarea id="address" name="address" required></textarea>
+  <br>
+
+  <label for="pincode">Pincode:</label>
+  <input type="text" id="pincode" name="pincode" required>
+  <br>
+
+  <label>Gender:</label>
+  <input type="radio" id="male" name="gender" value="Male" required>
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="Female" required>
+  <label for="female">Female</label>
+  <br>
+
+  <label for="food">Choice of Food (Select at least 2):</label>
+  <select id="food" name="food" multiple size="5" required>
+    <option value="Pizza">Pizza</option>
+    <option value="Burger">Burger</option>
+    <option value="Pasta">Pasta</option>
+    <option value="Salad">Salad</option>
+    <option value="Sandwich">Sandwich</option>
+  </select>
+  <br>
+
+  <label for="state">State:</label>
+  <input type="text" id="state" name="state" required>
+  <br>
+
+  <label for="country">Country:</label>
+  <input type="text" id="country" name="country" required>
+  <br>
+
+  <button type="button" onclick="submitForm()">Submit</button>
+</form>
+
+<table id="dataTable">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Pincode</th>
+      <th>Gender</th>
+      <th>Food</th>
+      <th>State</th>
+      <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Table content will be dynamically added here -->
+  </tbody>
+</table>
+
+<script>
+  function submitForm() {
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var address = document.getElementById('address').value;
+    var pincode = document.getElementById('pincode').value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var foodOptions = Array.from(document.getElementById('food').selectedOptions).map(option => option.value);
+    var state = document.getElementById('state').value;
+    var country = document.getElementById('country').value;
+
+    // Validate that at least 2 food options are selected
+    if (foodOptions.length < 2) {
+      alert('Select at least 2 food options.');
+      return;
+    }
+
+    // Create a new row for the table
+    var newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td>${firstName}</td>
+      <td>${lastName}</td>
+      <td>${address}</td>
+      <td>${pincode}</td>
+      <td>${gender}</td>
+      <td>${foodOptions.join(', ')}</td>
+      <td>${state}</td>
+      <td>${country}</td>
+    `;
+
+    // Append the new row to the table
+    document.getElementById('dataTable').getElementsByTagName('tbody')[0].appendChild(newRow);
+
+    // Clear the form fields
+    document.getElementById('myForm').reset();
+  }
+</script>
+
+</body>
+</html>
