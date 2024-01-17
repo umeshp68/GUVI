@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from  '../components/Footer'
-import Heroimg2 from  '../components/Heroimg2'
+// import Heroimg2 from  '../components/Heroimg2'
 
 
 const Project = () => {
@@ -9,7 +9,7 @@ const Project = () => {
     <div>
       <Navbar />
       <Footer />
-      <Heroimg2 />
+      {/* <Heroimg2 /> */}
     </div>
   )
 }
