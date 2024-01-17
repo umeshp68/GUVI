@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+body{
+  background: black;
+}
+
+h1,
+h4,
+p,
+a{
+  color: white;
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.btn {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db; /* Change this to your preferred color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #2980b9; /* Change this to a slightly darker shade */
+  transition: 0.3s;
+}
+
+.btn-light{
+  background: transparent;
+  color: #fff;
+}
+
